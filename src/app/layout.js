@@ -25,3 +25,24 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+export  function Navbar(){
+
+  return<div>
+    <h1>WIKIGAME</h1>
+    <form>
+      <select>
+        <option>Shooter</option>
+        <option>SandBox</option>
+      </select>
+      <input type="text" placeholder="Buscar"></input>
+    </form>
+    
+    <button>Perfil</button>
+  </div>
+}
+export  function Footer(){
+
+  return<div>
+   <p>Wikigame ©  2025- Contactos: fcorrom2907@g.educaand.es    - 999999999 - C/ Blanca de los rios 1</p>
+  </div>
+}
