@@ -29,6 +29,7 @@ export  function Navbar(){
 
   return<div>
     <h1>WIKIGAME</h1>
+    <label hidden="True">Modo administrador</label>
     <form>
       <select>
         <option>Shooter</option>

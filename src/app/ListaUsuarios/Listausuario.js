@@ -13,6 +13,8 @@ export default function ListaUsuario(){
 
     return<div>
        
+        <button hidden="True">Crear</button>
+       
         {
             array.map(juego =><div key={juego.id}>
                 <Juego objeto={juego} />
@@ -26,7 +28,7 @@ export default function ListaUsuario(){
 }
 function Juego({objeto}){
     return<div>
-        <img src={objeto.src} alt={objeto.nombre}></img>
+        <img src={objeto.src} alt={objeto.nombre} width={40} height={40}></img>
         <p>{objeto.nombre}</p>
     </div>
 }

@@ -1,9 +1,19 @@
 "use client"
 
+import { useState } from "react"
 
+const imagenes=[
+    {id:1,src:"fornite.png", alt:"fortnite"},
+    {id:2,src:"gta.jpeg" ,alt:"gta"},
+    {id:3,src:"fornite.png", alt:"fortnite"}
+
+]
 export default function Landing(){
+const [index,setIndex] = useState(1)
 
+function continuar(){
 
+}
     return<div>
       
             <h1>WIKIGAME</h1>
@@ -22,6 +32,13 @@ export default function Landing(){
       
         <button>Registrarse</button>
         <button>Iniciar sesión</button>
+        {imagenes.map(imagen => <div id={index}>
+            <img src={imagen.src} alt={imagen.alt}></img>
+            </div>)
+            }
+            <button onClick={()=>continuar()}>Anterior</button>
+            <button>Siguiente</button>
+            
         <img src="fornite.png" alt="fortnite" ></img>
         <img src="gta.jpeg" alt="gta" ></img>
         <img src="minecraft.jpeg" alt="minecraft" ></img>

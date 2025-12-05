@@ -1,16 +1,37 @@
 "use client"
 
+import { useState } from "react"
 
+array=[
+    {id:1,nombre:"Pepi" ,correo:"pepi@gmail",contraseña:"1234"}
+]
+let id=1
 export default function Registrar(){
+const[nuevoUsuario,setNuevoUsuario]= useState(array)
+const[nombre,setNombre]=useState("")
+const[email,setEmail]=useState("")
+const[contraseña,setContraseña]=useState("")
 
+function registrarUsuario(){
+const usuarioNuevo =[
+    ...nuevoUsuario,
+    {
+        id:id++,
+        nombre:nombre,
+        correo:email,
+        contraseña:contraseña
+    }
+]
+ setNuevoUsuario(usuarioNuevo)
+}
 
     return <div>
-        <form>
+        <form onSubmit={registrarUsuario}>
             <h1>Registrar</h1>
-            <input type="text" placeholder="@Usuario"></input>
-            <input type="email" placeholder="✉️Correo"></input>
-            <input type="password" placeholder="🔒Contraseña"></input>
-            <button>Registrar</button>
+            <input type="text" placeholder="@Usuario" value={nombre} onChange={(e)=> setNombre(e.target.value)}></input>
+            <input type="email" placeholder="✉️Correo" value={email} onChange={(e)=> setEmail(e.target.value)}></input>
+            <input type="password" placeholder="🔒Contraseña" value={contraseña} onChange={(e)=> setContraseña(e.target.value)}></input>
+            <button type="Submit">Registrar</button>
             <button>¿tienes cuenta?</button>
         </form>
     </div>
