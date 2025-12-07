@@ -4,7 +4,7 @@ export default function VistaJuego() {
     const [editar, setEditar] = useState(false);
     const [titulo, setTitulo] = useState("TITULO DEL JUEGO");
     const [consolas, setConsolas] = useState("");
-    const [tipo, setTipo] = useState("");
+    const [tipo, setTipo] = useState("");{/*Constantes de estado para guardar toda la informacion que reciba cuando edites el juego */}
     const [descripcion, setDescripcion] = useState("descripcion");
     const portada = "portadadb3.jpg";
     const gameplays = [
@@ -16,7 +16,7 @@ export default function VistaJuego() {
   function activarEdicion() {
     setEditar(true);
   }
-
+{/*Funciones para activar o desactivar el modo edición*/}
   function cancelarEdicion() {
     setEditar(false);
   }
@@ -24,6 +24,7 @@ export default function VistaJuego() {
   function guardarEdicion() {
     setEditar(false);
   }
+  {/*If para comproba si esta en modo edición */}
    if (editar) {
     return (
       <div>
@@ -49,7 +50,7 @@ export default function VistaJuego() {
     );
   }
     return (
-        <div>
+        <div>  {/*Vista por defecto */}
                     <button onClick={activarEdicion} >Editar</button>
                     
                     <img src={portada} alt="Portada" width={40} height={70} />

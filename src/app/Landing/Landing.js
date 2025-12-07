@@ -36,6 +36,7 @@ function continuar(){
             <img src={imagen.src} alt={imagen.alt}></img>
             </div>)
             }
+            {/*.map para mostrar las imagenes en un carrusel */}
             <button onClick={()=>continuar()}>Anterior</button>
             <button>Siguiente</button>
             

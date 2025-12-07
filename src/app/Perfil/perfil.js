@@ -13,6 +13,7 @@ export default function Perfil(){
     const [nombre, setNombre] = useState("Fran el largo");
     const [descripcion, setDescripcion] = useState("Descripcion");
      const [juegos, setJuegos] = useState(array);
+     {/*Constantes de estado para los campos y funciones para el modo edicion */}
     function activarEdicion(e) { 
         e.preventDefault()
         setEditar(true); 
@@ -23,9 +24,11 @@ export default function Perfil(){
     function guardarEdicion() { 
         setEditar(false);
      }
+          {/*Funcion para eliminar juegos de favoritos */}
      function eliminarJuego(id) {
         setJuegos(juegos.filter(juego => juego.id !== id));
     }
+    {/* if para comprobar si esta en modo edicion */}
     if (editar) {
         return <div>
             <form onSubmit={guardarEdicion}>
@@ -45,7 +48,7 @@ export default function Perfil(){
         </div>
     }
 
-    return<div>
+    return<div>     {/*Vista por fedecto */}
         <img src="logo 3.jpg"></img>
         <button hidden="True">Banear</button>
         <button onClick={activarEdicion}>Editar</button>
@@ -62,7 +65,7 @@ export default function Perfil(){
 }
 function Juegos({objeto}){
 
-    return<div>
+    return<div>     {/*Componente que renderiza cada juego de favoritos */}
         <img src={objeto.src} width={40} height={40}></img>
     </div>
 }

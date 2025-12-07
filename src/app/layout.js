@@ -30,7 +30,7 @@ export  function Navbar(){
   return<div>
     <h1>WIKIGAME</h1>
     <label hidden="True">Modo administrador</label>
-    <form>
+    <form>{/* Este formulario es para el buscador*/} 
       <select>
         <option>Tipo juego</option>
         <option>SandBox</option>
