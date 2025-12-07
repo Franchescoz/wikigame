@@ -9,7 +9,7 @@ const array=[
     {id:7 , nombre:"Inazuma Eleven" , src:"inazumaeleven.jpg"},
     {id:8 , nombre:"E-Football" , src:"efootball.jpg"}
 ]
-export default function ListaUsuario(){
+export default function ListaTarjetasJuegos(){
 
     return<div>
        

@@ -1,12 +1,12 @@
 import { Navbar } from "../layout";
 import { Footer } from "../layout";
-import ListaUsuario from "./Listausuario";
+import ListaTarjetasJuegos from "./ListaTarjetasJuegos";
 
 export default function Home() {
   return (
     <div >
       <Navbar/>
-    <ListaUsuario/>
+    <ListaTarjetasJuegos/>
     <Footer/>
     </div>
   );
