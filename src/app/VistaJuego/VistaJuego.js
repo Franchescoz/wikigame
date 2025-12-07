@@ -34,13 +34,13 @@ export default function VistaJuego() {
         <button>Cambiar</button>
         <form onSubmit={guardarEdicion}>
         <label>Titulo del juego:</label>
-        <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+        <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} required maxLength={50} />
         <label>Consolas:</label>
-        <input type="text" value={consolas} onChange={(e) => setConsolas(e.target.value)} />
+        <input type="text" value={consolas} onChange={(e) => setConsolas(e.target.value)} required/>
         <label>Tipo de juego:</label>
-        <input type="text" value={tipo} onChange={(e) => setTipo(e.target.value)} />
+        <input type="text" value={tipo} onChange={(e) => setTipo(e.target.value)} required/>
         <label>Descripcion:</label>
-        <textarea value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
+        <input value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required minLength={20}/>
 
         <button onClick={cancelarEdicion}>Cancelar</button>
         <button type="submit">Guardar</button>

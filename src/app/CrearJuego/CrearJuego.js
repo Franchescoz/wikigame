@@ -20,13 +20,13 @@ export default function CrearVistaJuego() {
                     <form >
                     <button>Cambiar</button> 
                     <label>Titulo del juego:</label>
-                    <input type="text" placeholder="Titulo del juego" value={titulo} onChange={(e)=> setTitulo(e.target.value)}></input>
+                    <input type="text" placeholder="Titulo del juego" value={titulo} onChange={(e)=> setTitulo(e.target.value)}required s/>
                     <label>Consolas:</label>
-                    <input type="text" placeholder="Consolas" value={consolas} onChange={(e)=> setConsolas(e.target.value)}></input>
+                    <input type="text" placeholder="Consolas" value={consolas} onChange={(e)=> setConsolas(e.target.value)}required/>
                     <label>Tipo de juego:</label>
-                    <input type="text" placeholder="Tipo de juego" value={tipo} onChange={(e)=> setTipo(e.target.value)}></input>
+                    <input type="text" placeholder="Tipo de juego" value={tipo} onChange={(e)=> setTipo(e.target.value)}required/>
                     <label>Descripcion:</label>
-                    <input type="text" placeholder="Descripcion" value={descripcion} onChange={(e)=> setDescripcion(e.target.value)}></input>
+                    <input type="text" placeholder="Descripcion" value={descripcion} onChange={(e)=> setDescripcion(e.target.value)}required minLength={20}/>
                     <button>Cancelar</button>   
                     <button>Crear</button>   
                     </form>

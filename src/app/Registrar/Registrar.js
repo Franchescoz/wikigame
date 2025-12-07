@@ -28,9 +28,9 @@ const usuarioNuevo =[
     return <div>
         <form onSubmit={registrarUsuario}>
             <h1>Registrar</h1>
-            <input type="text" placeholder="@Usuario" value={nombre} onChange={(e)=> setNombre(e.target.value)}></input>
-            <input type="email" placeholder="✉️Correo" value={email} onChange={(e)=> setEmail(e.target.value)}></input>
-            <input type="password" placeholder="🔒Contraseña" value={contraseña} onChange={(e)=> setContraseña(e.target.value)}></input>
+            <input type="text" placeholder="@Usuario" value={nombre} onChange={(e)=> setNombre(e.target.value)}required/>
+            <input type="email" placeholder="✉️Correo" value={email} onChange={(e)=> setEmail(e.target.value)} required/>
+            <input type="password" placeholder="🔒Contraseña" value={contraseña} onChange={(e)=> setContraseña(e.target.value)}required minLength={6} pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}"/>
             <button type="Submit">Registrar</button>
             <button>¿tienes cuenta?</button>
         </form>

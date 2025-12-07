@@ -32,8 +32,10 @@ export  function Navbar(){
     <label hidden="True">Modo administrador</label>
     <form>
       <select>
-        <option>Shooter</option>
+        <option>Tipo juego</option>
         <option>SandBox</option>
+        <option>Shooter</option>
+        <option>Lucha</option>
       </select>
       <input type="text" placeholder="Buscar"></input>
     </form>
