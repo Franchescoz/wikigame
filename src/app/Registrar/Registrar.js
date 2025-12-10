@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-array=[
+const array=[
     {id:1,nombre:"Pepi" ,correo:"pepi@gmail",contraseña:"1234"}
 ]
 let id=1

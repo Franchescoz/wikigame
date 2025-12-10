@@ -36,7 +36,7 @@ export default function Perfil(){
             <button>Cambiar</button>
             <input type="text" placeholder="usuario" value={nombre} onChange={(e) => setNombre(e.target.value)}required maxLength={50} />
             <label>Fecha de registro : 12/01/2004</label>
-            <input type="text" placeholder="Descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required minLength={20}/>
+            <textarea type="text" placeholder="Descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required minLength={20}/>
             <button onClick={cancelarEdicion}>Cancelar</button>
             <button type="submit">Guardar</button>
             </form>
