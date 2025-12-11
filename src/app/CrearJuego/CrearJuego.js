@@ -21,12 +21,16 @@ export default function CrearVistaJuego() {
                     <button>Cambiar</button> 
                     <label>Titulo del juego:</label>{/* Este formulario es para rellenar la información del juego*/} 
                     <input type="text" placeholder="Titulo del juego" value={titulo} onChange={(e)=> setTitulo(e.target.value)}required />
+                    <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} required maxLength={50} />
                     <label>Consolas:</label>
                     <input type="text" placeholder="Consolas" value={consolas} onChange={(e)=> setConsolas(e.target.value)}required/>
+                    <p>{consolas.length>4?"Consolas validas":"No tiene consolas"}</p>
                     <label>Tipo de juego:</label>
                     <input type="text" placeholder="Tipo de juego" value={tipo} onChange={(e)=> setTipo(e.target.value)}required/>
+                    <p>{tipo.length>4?"Tipos validos":"No tiene tipos"}</p>
                     <label>Descripcion:</label>
                     <input type="text" placeholder="Descripcion" value={descripcion} onChange={(e)=> setDescripcion(e.target.value)}required minLength={20}/>
+                    <p>{descripcion.length>19?"Descripcion valida":"La descripcion es muy corta"}</p>
                     <button>Cancelar</button>   
                     <button>Crear</button>   
                     </form>

@@ -29,8 +29,11 @@ const usuarioNuevo =[
         <form onSubmit={registrarUsuario}>
             <h1>Registrar</h1>{/* Este formulario es para recoger le usuario , correo y contraseña para registrarlo como nuevo usuario */}
             <input type="text" placeholder="@Usuario" value={nombre} onChange={(e)=> setNombre(e.target.value)}required/>
+            <p>{nombre.length<20?"Usuario valido":"El nombre es demasiado grande"}</p>
             <input type="email" placeholder="✉️Correo" value={email} onChange={(e)=> setEmail(e.target.value)} required/>
+            <p>{email.includes("@")?"Correo valido":"Te falta el arroba"}</p>
             <input type="password" placeholder="🔒Contraseña" value={contraseña} onChange={(e)=> setContraseña(e.target.value)}required minLength={6} pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}"/>
+            <p>{contraseña.length>7?"Contraseña valida":"La contraseña al menos tiene que tener 8 caracteres"}</p>
             <button type="Submit">Registrar</button>
             <button>¿tienes cuenta?</button>
         </form>

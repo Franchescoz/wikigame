@@ -35,8 +35,10 @@ export default function Perfil(){
             <img src="logo 3.jpg"></img>
             <button>Cambiar</button>
             <input type="text" placeholder="usuario" value={nombre} onChange={(e) => setNombre(e.target.value)}required maxLength={50} />
+            <p>{nombre.length<20?"Limite correcto":"El nombre es demasiado grande"}</p>
             <label>Fecha de registro : 12/01/2004</label>
             <textarea type="text" placeholder="Descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required minLength={20}/>
+            <p>{descripcion.length>19?"Descripcion valida":"La descripcion es muy corta"}</p>
             <button onClick={cancelarEdicion}>Cancelar</button>
             <button type="submit">Guardar</button>
             </form>
@@ -48,7 +50,7 @@ export default function Perfil(){
         </div>
     }
 
-    return<div>     {/*Vista por fedecto */}
+    return<div>     {/*Vista por defecto */}
         <img src="logo 3.jpg"></img>
         <button hidden="True">Banear</button>
         <button onClick={activarEdicion}>Editar</button>

@@ -1,6 +1,6 @@
 import { Navbar } from "../layout";
 
-import Perfil from "./perfil";
+import Perfil from "./Perfil";
 export default function Home() {
   return (
     <div >

@@ -36,13 +36,16 @@ export default function VistaJuego() {
         <form onSubmit={guardarEdicion}>
         <label>Titulo del juego:</label>
         <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} required maxLength={50} />
+        <p>{titulo.length>0?titulo.length<40?"Titulo valido":"El titulo es demasiado largo":"Pon el titulo"}</p>
         <label>Consolas:</label>
         <input type="text" value={consolas} onChange={(e) => setConsolas(e.target.value)} required/>
+        <p>{consolas.length>4?"Consolas validas":"No tiene consolas"}</p>
         <label>Tipo de juego:</label>
         <input type="text" value={tipo} onChange={(e) => setTipo(e.target.value)} required/>
+        <p>{tipo.length>4?"Tipos validos":"No tiene tipos"}</p>
         <label>Descripcion:</label>
         <input value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required minLength={20}/>
-
+        <p>{descripcion.length>19?"Descripcion valida":"La descripcion es muy corta"}</p>
         <button onClick={cancelarEdicion}>Cancelar</button>
         <button type="submit">Guardar</button>
         </form>
@@ -62,7 +65,7 @@ export default function VistaJuego() {
                     <p>Consolas :{consolas}</p>
                     <p >Tipo de juego :{tipo}</p>
 
-                    <textarea value={descripcion} readOnly> </textarea>
+                    <textarea value={descripcion} readOnly>Descripción de ejemplo</textarea>
                     <button>Favorito</button>    
 
         </div>

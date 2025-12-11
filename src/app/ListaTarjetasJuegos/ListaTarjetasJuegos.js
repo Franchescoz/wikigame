@@ -1,4 +1,5 @@
 "use client"
+{/*La lista de juegos que habra por fedecto */}
 const array=[
     {id:1 , nombre:"Minecraft" , src:"minecraft.jpeg"},
     {id:2 , nombre:"Fortnite" , src:"fornite.png"},
@@ -9,7 +10,7 @@ const array=[
     {id:7 , nombre:"Inazuma Eleven" , src:"inazumaeleven.jpg"},
     {id:8 , nombre:"E-Football" , src:"efootball.jpg"}
 ]
-export default function ListaUsuario(){
+export default function ListaTarjetasJuegos(){
 
     return<div>
        
@@ -20,14 +21,14 @@ export default function ListaUsuario(){
                 <Juego objeto={juego} />
                 </div>
         )
-        }
+        }{/*.map para mostrar la lista*/}
         <button>Prev.</button>
         <button>Siguie.</button>
 
     </div>
 }
 function Juego({objeto}){
-    return<div>
+    return<div>{/*Componente juego donde se renderizara cada juego*/}
         <img src={objeto.src} alt={objeto.nombre} width={40} height={40}></img>
         <p>{objeto.nombre}</p>
     </div>
