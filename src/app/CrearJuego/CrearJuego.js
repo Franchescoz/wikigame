@@ -29,7 +29,7 @@ export default function CrearVistaJuego() {
                     <input type="text" placeholder="Tipo de juego" value={tipo} onChange={(e)=> setTipo(e.target.value)}required/>
                     <p>{tipo.length>4?"Tipos validos":"No tiene tipos"}</p>
                     <label>Descripcion:</label>
-                    <input type="text" placeholder="Descripcion" value={descripcion} onChange={(e)=> setDescripcion(e.target.value)}required minLength={20}/>
+                    <textarea type="text" placeholder="Descripcion" value={descripcion} onChange={(e)=> setDescripcion(e.target.value)}required minLength={20}/>
                     <p>{descripcion.length>19?"Descripcion valida":"La descripcion es muy corta"}</p>
                     <button>Cancelar</button>   
                     <button>Crear</button>   

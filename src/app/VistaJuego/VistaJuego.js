@@ -44,7 +44,7 @@ export default function VistaJuego() {
         <input type="text" value={tipo} onChange={(e) => setTipo(e.target.value)} required/>
         <p>{tipo.length>4?"Tipos validos":"No tiene tipos"}</p>
         <label>Descripcion:</label>
-        <input value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required minLength={20}/>
+        <textarea value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required minLength={20}/>
         <p>{descripcion.length>19?"Descripcion valida":"La descripcion es muy corta"}</p>
         <button onClick={cancelarEdicion}>Cancelar</button>
         <button type="submit">Guardar</button>
@@ -65,7 +65,7 @@ export default function VistaJuego() {
                     <p>Consolas :{consolas}</p>
                     <p >Tipo de juego :{tipo}</p>
 
-                    <textarea value={descripcion} readOnly>Descripción de ejemplo</textarea>
+                    <textarea value={descripcion} readOnly></textarea>
                     <button>Favorito</button>    
 
         </div>
